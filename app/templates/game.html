@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
+    <title>Jugar</title>
+</head>
+<body>
+
+    <section class="container-game">
+        <nav class="navbar">
+            <a href="{{url_for('juego.menu')}}" class="volver">Volver</a>
+            <h1>Froggy road</h1>
+        </nav>
+        <main class="juego">
+        <canvas id="main" width="700" height="750">
+            <img id="img_arbol" src="{{ url_for('static', filename='imgs/arbol.png')}}" width="100" height="100">
+            <img id="img_camion" src="{{ url_for('static', filename='imgs/camion.png')}}" width="200" height="100">
+            <img id="img_carretera" src="{{ url_for('static', filename='imgs/carretera.png')}}" width="100" height="100">
+            <img id="img_carro1" src="{{ url_for('static', filename='imgs/carro1.png')}}" width="100" height="100">
+            <img id="img_carro2" src="{{ url_for('static', filename='imgs/carro2.png')}}" width="100" height="100">
+            <img id="img_carro3" src="{{ url_for('static', filename='imgs/carro3.png')}}" width="100" height="100">
+            <img id="img_carro4" src="{{ url_for('static', filename='imgs/carro4.png')}}" width="100" height="100">
+            <img id="img_pasto" src="{{ url_for('static', filename='imgs/libre.png')}}" width="100" height="100">
+            <img id="img_rana_duerme" src="{{ url_for('static', filename='imgs/rana_duerme.png')}}" width="100" height="100">
+            <img id="img_piedra" src="{{ url_for('static', filename='imgs/piedra.png')}}" width="100" height="100">
+            <img id="img_puente" src="{{ url_for('static', filename='imgs/puente.png')}}" width="100" height="100">
+            <img id="img_rios" src="{{ url_for('static', filename='imgs/rios.png')}}" width="100" height="100">
+            <img id="img_salida" src="{{ url_for('static', filename='imgs/salida.png')}}" width="100" height="100">
+            <img id="img_jugador1" src="{{ url_for('static', filename='imgs/rana1.png')}}" width="100" height="100">
+            <img id="img_jugador2" src="{{ url_for('static', filename='imgs/rana2.png')}}" width="100" height="100">
+            <img id="img_jugador3" src="{{ url_for('static', filename='imgs/rana3.png')}}" width="100" height="100">
+            <img id="img_jugador4" src="{{ url_for('static', filename='imgs/rana4.png')}}" width="100" height="100">
+            <img id="img_bici1" src="{{ url_for('static', filename='imgs/bici1.png')}}" width="100" height="100">
+            <img id="img_bici2" src="{{ url_for('static', filename='imgs/bici2.png')}}" width="100" height="100">
+            <img id="img_bici3" src="{{ url_for('static', filename='imgs/bici3.png')}}" width="100" height="100">
+            <img id="img_vidas" src="{{ url_for('static', filename='imgs/corazon.png')}}" width="42" height="42">
+            <img id="img_reloj" src="{{ url_for('static', filename='imgs/reloj.png')}}" width="30" height="45">
+            <img id="img_pop" src="{{ url_for('static', filename='imgs/pop.png')}}" width="600" height="331">
+            <img id="img_pop_final" src="{{ url_for('static', filename='imgs/pop_final.png')}}" width="285" height="80">
+        </canvas>
+    </main>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>

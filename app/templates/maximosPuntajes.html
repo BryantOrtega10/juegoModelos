@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
+    <title>Mis puntajes</title>
+</head>
+<body>
+    <section class="container-game">
+        <nav class="navbar">
+            <a href="{{url_for('juego.menu')}}" class="volver">Volver</a>
+            <h1>Froggy road</h1>
+        </nav>
+        <div class="main_ranking_container">
+            <h2>Mis Maximos Puntajes</h2>
+            <div class="main_filaRanking primero">
+                <div class="main_puntaje full">
+                    <h4>Puntajes</h4>
+                </div>
+            </div>
+             <div class="main_rankings">
+                 {% for puntaje in puntajes %}
+                    <div class="main_filaRanking">
+                        <div class="main_puntaje full">
+                            <p>{{puntaje.pun_i_puntaje}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>

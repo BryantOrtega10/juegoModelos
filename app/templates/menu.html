@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
+    <title>Menu</title>
+</head>
+<body>
+    <section class="main-menu">
+        <h1>Froggy road</h1>
+        <div class="content_menu">
+            <a class="btns" href="{{url_for('juego.jugar')}}">Jugar</a>
+            <a class="btns" id="btnInstrucciones">Instrucciones</a>
+            <a class="btns"  href="{{url_for('juego.maximos_puntajes')}}">Maximos puntajes</a>
+            <a class="btns" href="{{url_for('juego.salir')}}">Salir</a>
+        </div>
+    </section>
+    <div class="popup" id="instrucciones">
+        <div class="content-popup">
+            <h3>Instrucciones</h3>
+            <div class="instrucciones">
+                <img src="{{ url_for('static', filename='img/arrows.png')}}" />
+                <p class="instrucciones-text">
+                    ¡Se han olvidado de froggy!, intenta cruzar el camino para llegar con tu familia<br>
+                    Muevete con las fechas de dirección e intenta esquivar todos los obstaculos
+                </p>
+            </div>
+
+
+            <button class="cerrar_pop">Cerrar</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/menu.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+:root {
+    --colorFondo: #2b2b2b;
+    --colorLetra: #48ff4a;
+    --colorLetraHover: #37d838;
+    --colorLetra2: #a9a9a9;
+    --colorLetraTitulo: #43eb45;
+    --imgFondoDashboard: url(/imgs/theme/fondoDashboard_act.png);
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+body{
+    margin: 0;
+    background: url(../img/fondoGen.jpg);
+    background-size: cover;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+h4,p{
+    margin: 0;
+}
+
+.navbar{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main{
+    display:flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.main_forms{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: #FFF;
+    background-color: var(--colorFondo);
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.main_login,
+.main_register{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    margin-top: 0;
+}
+
+.main_form-login,
+.main_form-register{
+    width: 80%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: auto;
+    color: #FFF;
+    margin-top: 5%;
+}
+
+.main_form-login input[type="text"], .main_form-login input[type="password"], .main_form-register input[type="text"], .main_form-register input[type="password"]{
+    width: 100%;
+    margin: .3rem 0 1rem 0;
+    height: 35px;
+    padding: 0.5rem 0.3rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: thin solid #fff;
+    background: transparent;
+    color: #FFF;
+}
+
+.main_form-login input[type="text"]:focus,
+.main_form-register input[type="text"]:focus{
+    outline: none;
+    border-bottom: thin solid rgb(72 255 69);
+}
+
+.main_form-login h3,
+.main_form-register h3{
+    margin: auto;
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+.main_form-login input[type="submit"],
+.main_form-register [type="submit"]{
+    width: 100%;
+    margin: auto;
+    background: var(--colorLetra);
+    border: 0;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 20px;
+    color: #000;
+}
+
+
+.main_ranking_section{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: url(../img/fondo.jpg);
+    background-size: contain;
+}
+
+.main_ranking_container{
+    padding: 0 10%;
+    width: 80%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    overflow-x: hidden;
+    padding-top: 10%;
+    background: #2b2b2beb;
+    color: #FFF;
+}
+
+.btns{
+    width: 100%;
+    height: 30px;
+    margin: 1rem auto;
+    font-size: 1rem;
+    background: transparent;
+    color: #FFF;
+    border: 0;
+    cursor: pointer;
+}
+
+.btns:focus{
+    outline: none;
+}
+
+.main_filaRanking{
+    width: 100%;
+    display: flex;
+    border-bottom: thin solid gray;
+    padding-bottom: 5px;
+}
+
+.primero{
+    margin-bottom: 1rem;
+}
+
+.main_nameRanking{
+    width: 40%;
+}
+
+.main_puntaje{
+    width: 60%;
+    text-align: center;
+}
+
+.main_rankings{
+    display: grid;
+    grid-auto-rows: 30px;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.null{
+    display: none;
+}
+
+section.main_forms h1 {
+    color: var(--colorLetraTitulo);
+    font-size: 3em;
+    margin-bottom: 0;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+}
+
+.main_forms h3 {
+    font-size: 1.5em;
+    color: #FFF;
+    margin: 0;
+    text-align: left;
+    width: 80%;
+}
+
+.main_ranking_container h2 {
+    font-size: 3em;
+}
+
+.popup{
+  display: none;
+}
+.popup.activo {
+    display: flex;
+    background: #000000c9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-popup {
+  background: #FFF;
+  border-radius: 3px;
+  font-family: sans-serif;
+  min-width: 20%;
+}
+
+.content-popup ul {
+    padding-left: 35px;
+}
+
+.content-popup h3 {
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    font-size: 25px;
+    text-align: left;
+    padding: 20px 20px;
+    margin: 0;
+}
+
+.popup.activo .cerrar {
+    margin: auto;
+    display: block;
+    font-size: 15px;
+    padding: 5px 20px;
+}
+
+.content-popup button {
+    width: 50%;
+    margin: auto;
+    background: var(--colorLetra);
+    border: 0;
+    border-radius: 4px;
+    height: 36px;
+    font-size: 17px;
+    color: #000;
+    display: block;
+    margin-bottom: 17px;
+    cursor: pointer;
+}
+
+section.main-menu, section.container-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    background: #000000db;
+    height: 100vh;
+    position: relative;
+}
+
+section.main-menu h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--colorLetraTitulo);
+    font-size: 8em;
+    margin-bottom: 0;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+    margin: 0;
+}
+
+.content_menu .btns{
+    font-family: 'Audiowide';
+    text-align: center;
+    font-size: 30px;
+    width: 40%;
+    margin: auto;
+    height: auto;
+    border: 1px solid var(--colorLetra);
+    margin-bottom: 22px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: block;
+}
+
+.instrucciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.instrucciones p {
+    font-size: 20px;
+    width: 280px;
+    text-align: justify;
+    margin-left: 25px;
+}
+
+.instrucciones img {
+    width: 250px;
+}
+
+.content_menu {
+    width: 100%;
+}
+
+section.container-game h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--colorLetraTitulo);
+    font-size: 4em;
+    margin-bottom: 0;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+    margin: 0;
+}
+
+a.volver {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.container-game .main_ranking_container {
+    background: transparent;
+    padding-top: 0;
+    height: calc(100% - 200px);
+}
+
+.main_puntaje.full {
+    width: 100%;
+    font-size: 25px;
+}
